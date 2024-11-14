@@ -50,20 +50,20 @@ class DefaultFirebaseOptions {
   }
 
   static const FirebaseOptions android = FirebaseOptions(
-    apiKey: 'AIzaSyAXU39GaOzL-uUr18yV1HDz_tUf8UzhAIs',
-    appId: '1:281992276999:android:321833a696d0f91eb60ea2',
-    messagingSenderId: '281992276999',
-    projectId: 'nadhimart-membership',
-    storageBucket: 'nadhimart-membership.firebasestorage.app',
+    apiKey: 'AIzaSyAvrSupU22w6Qo0bJaPQbqWbACrw2hCX3w',
+    appId: '1:322956354348:android:093e5a2abb3cf16a030289',
+    messagingSenderId: '322956354348',
+    projectId: 'flounaelza-apps',
+    storageBucket: 'flounaelza-apps.firebasestorage.app',
   );
 
   static const FirebaseOptions ios = FirebaseOptions(
-    apiKey: 'AIzaSyC5HpB2E_IRcut7eXtU2LPcFqb37Ht26n8',
-    appId: '1:281992276999:ios:8d2a71dc7b1be4dfb60ea2',
-    messagingSenderId: '281992276999',
-    projectId: 'nadhimart-membership',
-    storageBucket: 'nadhimart-membership.firebasestorage.app',
-    iosBundleId: 'com.nadhimart.membership',
+    apiKey: 'AIzaSyBwC-1e-L5b6iGjz03RbQaFacbpCgnJZFY',
+    appId: '1:322956354348:ios:680ec8051ae4ce11030289',
+    messagingSenderId: '322956354348',
+    projectId: 'flounaelza-apps',
+    storageBucket: 'flounaelza-apps.firebasestorage.app',
+    iosBundleId: 'com.a-deventures.flounaelza',
   );
 
 }

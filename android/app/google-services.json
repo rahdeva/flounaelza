@@ -1,0 +1,29 @@
+{
+  "project_info": {
+    "project_number": "322956354348",
+    "project_id": "flounaelza-apps",
+    "storage_bucket": "flounaelza-apps.firebasestorage.app"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:322956354348:android:093e5a2abb3cf16a030289",
+        "android_client_info": {
+          "package_name": "com.adeventures.flounaelza"
+        }
+      },
+      "oauth_client": [],
+      "api_key": [
+        {
+          "current_key": "AIzaSyAvrSupU22w6Qo0bJaPQbqWbACrw2hCX3w"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": []
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
