@@ -1,16 +1,16 @@
 # After editing this file,
-# you must save it and run 'flutter pub run flutter_native_splash:create'
+# you must save it and run 'dart run flutter_native_splash:create'
 flutter_native_splash:
-  color: "#F15F36"
+  color: "#FFFFFF"
   android_12:
-    color: "#F15F36"
-    color_dark: "#F15F36"
+    color: "#FFFFFF"
+    color_dark: "#FFFFFF"
   android_gravity: center
   ios_content_mode: center
   fullscreen: true
   image: assets/images/image_logo_splash.png
-  color_dark: "#F15F36"
-  color_android: "#F15F36"
-  color_dark_android: "#F15F36"
-  color_ios: "#F15F36"
-  color_dark_ios: "#F15F36"
+  color_dark: "#FFFFFF"
+  color_android: "#FFFFFF"
+  color_dark_android: "#FFFFFF"
+  color_ios: "#FFFFFF"
+  color_dark_ios: "#FFFFFF"
