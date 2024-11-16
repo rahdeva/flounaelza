@@ -90,7 +90,7 @@ class _DateRangePickerWidgetState extends State<DateRangePickerWidget> {
                   padding: const EdgeInsets.fromLTRB(4, 4, 10, 4),
                   child: CircleAvatar(
                     radius: 18,
-                    backgroundColor: AppColors.bgCalendarIcon,
+                    backgroundColor: AppColors.primaryColor,
                     child: SvgPicture.asset(
                       SvgAssetConstant.calendarIcon,
                       colorFilter: const ColorFilter.mode(
