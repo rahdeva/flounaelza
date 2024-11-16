@@ -1,6 +1,5 @@
 import 'package:flutter/material.dart';
 import 'package:flounaelza/src/constants/app_colors_constant.dart';
-import 'package:flounaelza/src/features/coupon/pages/my_coupon/widgets/redeem_my_coupon_bottom_sheet.dart';
 import 'package:flounaelza/src/widgets/buttons/pressable.dart';
 import 'package:flounaelza/src/widgets/loaders/image_load.dart';
 import 'package:flounaelza/src/widgets/texts/default_text.dart';
@@ -14,7 +13,6 @@ class MyCouponItem extends StatelessWidget {
   Widget build(BuildContext context) {
     return Pressable(
       onPressed: (){
-        openRedeemMyCouponBottomSheet(context);
       },
       child: Container(
         margin: const EdgeInsets.fromLTRB(16, 0, 16, 16),

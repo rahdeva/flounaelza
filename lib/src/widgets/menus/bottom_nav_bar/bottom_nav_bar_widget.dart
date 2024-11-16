@@ -47,7 +47,7 @@ class BottomNavBarWidget extends StatelessWidget {
     {
       'index': 2,
       'routeName': AppRoutes.SCAN,
-      'icon': SvgAssetConstant.scanIcon,
+      'icon': SvgAssetConstant.filterDateIcon,
       'label': AppLocale.scan.getString(context),
       'isCenter': true,
     },

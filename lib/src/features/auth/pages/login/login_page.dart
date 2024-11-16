@@ -1,7 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:flutter/services.dart';
 import 'package:flounaelza/src/constants/locale_constant.dart';
-import 'package:flounaelza/src/features/auth/widgets/auth_header_widget.dart';
 import 'package:flounaelza/src/routes/app_routes.dart';
 import 'package:flounaelza/src/utils/navigation_util.dart';
 import 'package:flounaelza/src/utils/validators/form_validator.dart';
@@ -55,12 +54,6 @@ class _LoginPageState extends State<LoginPage> {
             crossAxisAlignment: CrossAxisAlignment.start,
             children: [
               const SizedBox(height: 72),
-              AuthHeaderWidget(
-                step: 4,
-                stepWithTitle: true,
-                stepTitle: AppLocale.authSignInAuthHeader.getString(context),
-                title: AppLocale.authPleaseSignIn.getString(context),
-              ),
               _buildFormInitialIdentity(),
             ],
           ),

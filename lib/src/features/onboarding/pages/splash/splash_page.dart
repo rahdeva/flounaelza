@@ -17,7 +17,7 @@ class _SplashPageState extends State<SplashPage> {
   _onSplashPageInitialized() {
     Future.delayed(const Duration(seconds: 2), () {
       FlutterNativeSplash.remove();
-      NavigationUtil.go(AppRoutes.AUTH_LANDING);
+      NavigationUtil.go(AppRoutes.LOGIN);
     });
   }
 
@@ -40,7 +40,7 @@ class _SplashPageState extends State<SplashPage> {
         ),
       ),
       extendBodyBehindAppBar: true,
-      backgroundColor: AppColors.primaryColor,
+      backgroundColor: AppColors.white,
       body: SafeArea(
         child: Center(
           child: Padding(

@@ -5,7 +5,6 @@ import 'package:flounaelza/src/constants/app_colors_constant.dart';
 import 'package:flounaelza/src/constants/asset_constant.dart';
 import 'package:flounaelza/src/constants/locale_constant.dart';
 import 'package:flounaelza/src/features/home/pages/widgets/home_list_header.dart';
-import 'package:flounaelza/src/features/home/pages/widgets/home_member_card.dart';
 import 'package:flounaelza/src/features/home/pages/widgets/home_redeem_point.dart';
 import 'package:flounaelza/src/features/home/pages/widgets/monthly_promo_list_builder.dart';
 import 'package:flounaelza/src/features/home/pages/widgets/promo_recommendation_list_builder.dart';
@@ -64,7 +63,6 @@ class _HomePageState extends State<HomePage> {
       body: SingleChildScrollView(
         child: Column(
           children: [
-            const HomeMemberCard(),
             const SizedBox(height: 8),
             const HomeRedeemPoint(),
             const SizedBox(height: 24),

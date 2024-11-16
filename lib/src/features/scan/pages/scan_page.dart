@@ -89,29 +89,6 @@ class _ScanPageState extends State<ScanPage> {
               )
             ),
             const SizedBox(height: 16),
-            Container(
-              margin: const EdgeInsets.symmetric(horizontal: 16),
-              height: SizeUtil.getProportionalHeight(height: 0.4),
-              alignment: Alignment.center,
-              child: DottedBorder(
-                borderType: BorderType.RRect,
-                radius: const Radius.circular(6),
-                color: AppColors.neutral600,
-                dashPattern: const [8, 4],
-                child: Container(
-                  margin: const EdgeInsets.symmetric(vertical: 24),
-                  width: double.infinity,
-                  child: Column(
-                    mainAxisAlignment: MainAxisAlignment.center,
-                    children: [
-                      Image.asset(
-                        ImageAssetConstant.barcodePlaceholderImage,
-                      ),
-                    ],
-                  ),
-                ),
-              ),
-            ),
             const SizedBox(height: 8),
             Container(
               margin: const EdgeInsets.all(16),

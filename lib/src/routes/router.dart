@@ -2,24 +2,17 @@ import 'package:go_router/go_router.dart';
 import 'package:flounaelza/src/features/account/pages/account/account_page.dart';
 import 'package:flounaelza/src/features/account/pages/account_information/account_information_page.dart';
 import 'package:flounaelza/src/features/account/pages/change_password/change_password_page.dart';
-import 'package:flounaelza/src/features/account/pages/delete_account_success/delete_account_success_page.dart';
 import 'package:flounaelza/src/features/account/pages/forgot_password/forgot_password_page.dart';
 import 'package:flounaelza/src/features/account/pages/help/help_page.dart';
-import 'package:flounaelza/src/features/auth/pages/email_verification/email_verification_page.dart';
-import 'package:flounaelza/src/features/auth/pages/initial_identity/initial_identity_page.dart';
 import 'package:flounaelza/src/features/auth/pages/login/login_page.dart';
-import 'package:flounaelza/src/features/auth/pages/register/register_page.dart';
 import 'package:flounaelza/src/features/coupon/pages/coupon_detail/coupon_detail_page.dart';
 import 'package:flounaelza/src/features/coupon/pages/my_coupon/my_coupon_page.dart';
 import 'package:flounaelza/src/features/coupon/pages/status_redeem_coupon/status_redeem_coupon_page.dart';
 import 'package:flounaelza/src/features/history/pages/history_page.dart';
 import 'package:flounaelza/src/features/home/pages/home_page.dart';
-import 'package:flounaelza/src/features/auth/pages/auth_landing/auth_landing_page.dart';
 import 'package:flounaelza/src/features/member/pages/member_menu/member_menu_page.dart';
 import 'package:flounaelza/src/features/notification/pages/notification_page.dart';
 import 'package:flounaelza/src/features/onboarding/pages/splash/splash_page.dart';
-import 'package:flounaelza/src/features/point/pages/royalty_point/royalty_point_page.dart';
-import 'package:flounaelza/src/features/point/pages/success_redeem_point/success_redeem_point_page.dart';
 import 'package:flounaelza/src/features/promo/pages/all_monthly_promo/all_monthly_promo_page.dart';
 import 'package:flounaelza/src/features/promo/pages/all_recommendation_promo/all_recommendation_promo_page.dart';
 import 'package:flounaelza/src/features/promo/pages/promo_detail/promo_detail_page.dart';
@@ -35,32 +28,8 @@ final router = GoRouter(
       builder: (context, state) => const SplashPage(),
     ),
     GoRoute(
-      path: AppRoutes.AUTH_LANDING,
-      builder: (context, state) => const AuthLandingPage(),
-    ),
-    GoRoute(
       path: AppRoutes.LOGIN,
       builder: (context, state) => const LoginPage(),
-    ),
-    GoRoute(
-      path: AppRoutes.REGISTER,
-      builder: (context, state) => const RegisterPage(),
-    ),
-    GoRoute(
-      path: AppRoutes.EMAIL_VERIFICATION,
-      pageBuilder: (context, state) => buildPageWithFadeTransition<void>(
-        context: context, 
-        state: state, 
-        child: const EmailVerificationPage(),
-      ),
-    ),
-    GoRoute(
-      path: AppRoutes.INITIAL_IDENTITY,
-      pageBuilder: (context, state) => buildPageWithFadeTransition<void>(
-        context: context, 
-        state: state, 
-        child: const InitialIdentityPage(),
-      ),
     ),
     GoRoute(
       path: AppRoutes.HOME,
@@ -115,10 +84,6 @@ final router = GoRouter(
       builder: (context, state) => const HelpPage(),
     ),
     GoRoute(
-      path: AppRoutes.DELETE_ACCOUNT_SUCCESS,
-      builder: (context, state) => const DeleteAccountSuccessPage(),
-    ),
-    GoRoute(
       path: AppRoutes.FORGOT_PASSWORD,
       builder: (context, state) => const ForgotPasswordPage(),
     ),
@@ -133,14 +98,6 @@ final router = GoRouter(
     GoRoute(
       path: AppRoutes.MEMBER_MENU,
       builder: (context, state) => const MemberMenuPage(),
-    ),
-    GoRoute(
-      path: AppRoutes.ROYALTY_POINT,
-      builder: (context, state) => const RoyaltyPointPage(),
-    ),
-    GoRoute(
-      path: AppRoutes.SUCCESS_REDEEM_POINT,
-      builder: (context, state) => const SuccessRedeemPointPage(),
     ),
     GoRoute(
       path: AppRoutes.PROMO_DETAIL,
