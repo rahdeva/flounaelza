@@ -1,3 +1,5 @@
+import 'package:flounaelza/src/constants/app_colors_constant.dart';
+import 'package:flounaelza/src/constants/app_elevation_constant.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter/services.dart';
 import 'package:flounaelza/src/constants/locale_constant.dart';
@@ -5,10 +7,8 @@ import 'package:flounaelza/src/routes/app_routes.dart';
 import 'package:flounaelza/src/utils/navigation_util.dart';
 import 'package:flounaelza/src/utils/validators/form_validator.dart';
 import 'package:flounaelza/src/widgets/buttons/primary_button.dart';
-import 'package:flounaelza/src/widgets/buttons/tertiary_button.dart';
 import 'package:flounaelza/src/widgets/inputs/primary_input.dart';
 import 'package:flutter_localization/flutter_localization.dart';
-import 'package:flounaelza/src/widgets/texts/default_text.dart';
 
 class LoginPage extends StatefulWidget {
   const LoginPage({super.key});
@@ -54,7 +54,7 @@ class _LoginPageState extends State<LoginPage> {
             crossAxisAlignment: CrossAxisAlignment.start,
             children: [
               const SizedBox(height: 72),
-              _buildFormInitialIdentity(),
+              _buildFormLogin(),
             ],
           ),
         ),
@@ -62,11 +62,17 @@ class _LoginPageState extends State<LoginPage> {
     );
   }
 
-  _buildFormInitialIdentity() {
+  _buildFormLogin() {
     return Container(
       margin: const EdgeInsets.symmetric(
         horizontal: 16, 
         vertical: 20
+      ),
+      padding: const EdgeInsets.symmetric(horizontal: 24, vertical: 50),
+      decoration: BoxDecoration(
+        borderRadius: BorderRadius.circular(10),
+        color: AppColors.white,
+        boxShadow: [ AppElevation.elevation4px ]
       ),
       child: Form(
         key: _loginFormKey,
@@ -99,16 +105,6 @@ class _LoginPageState extends State<LoginPage> {
               ),
               onChanged: (p0) {
                 _checkFilled();
-              },
-            ),
-            const SizedBox(height: 20),
-            TertiaryButton(
-              variant: TertiaryButtonVariant.regular,
-              label: AppLocale.forgotPassword.getString(context),
-              textType: DefaultTextType.textSM,
-              textWeight: DefaultTextWeight.medium,
-              onPressed: () {
-                NavigationUtil.push(AppRoutes.FORGOT_PASSWORD);
               },
             ),
             const SizedBox(height: 40),

@@ -27,13 +27,13 @@ class _ChangeLanguageButtonState extends State<ChangeLanguageButton> {
   @override
   Widget build(BuildContext context) {
     if(_languageCubit.state == 'id'){
-      selectedLanguage = AppLocale.indonesia_language.getString(context);
+      selectedLanguage = AppLocale.indonesiaLanguage.getString(context);
     } else if(_languageCubit.state == 'en'){
-      selectedLanguage = AppLocale.english_language.getString(context);
+      selectedLanguage = AppLocale.englishLanguage.getString(context);
     }
     languageList = [
-      AppLocale.english_language.getString(context),
-      AppLocale.indonesia_language.getString(context),
+      AppLocale.englishLanguage.getString(context),
+      AppLocale.indonesiaLanguage.getString(context),
     ];
 
     return Container(
@@ -57,9 +57,9 @@ class _ChangeLanguageButtonState extends State<ChangeLanguageButton> {
             setState(() {
               if(newValue != null){
                 selectedLanguage = newValue;
-                if(newValue == AppLocale.english_language.getString(context)){
+                if(newValue == AppLocale.englishLanguage.getString(context)){
                   _languageCubit.changeLanguage(newLanguage: 'en');
-                } else if(newValue == AppLocale.indonesia_language.getString(context)){
+                } else if(newValue == AppLocale.indonesiaLanguage.getString(context)){
                   _languageCubit.changeLanguage(newLanguage: 'id');
                 }
               }

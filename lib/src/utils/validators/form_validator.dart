@@ -13,13 +13,13 @@ class FormValidator {
     }
     if ((value == null || value.isEmpty)) {
       return AppLocale
-        .validate_email_cant_empty
+        .validateEmailCantEmpty
         .getString(context);
     }
     if (!RegExp(r'^.+@[a-zA-Z]+\.{1}[a-zA-Z]+(\.{0,1}[a-zA-Z]+)$')
         .hasMatch(value)) {
       return AppLocale
-        .validate_email_not_valid
+        .validateEmailNotValid
         .getString(context);
     }
     return null;
@@ -31,12 +31,12 @@ class FormValidator {
   }) {
     if (value == null || value.isEmpty) {
       return AppLocale
-        .validate_password_cant_empty
+        .validatePasswordCantEmpty
         .getString(context);
     }
     if (value.length < 8) {
       return AppLocale
-        .validate_password_min_char
+        .validatePasswordMinChar
         .getString(context);
     }
     return null;
@@ -48,12 +48,12 @@ class FormValidator {
   }) {
     if (value == null || value.isEmpty) {
       return AppLocale
-        .validate_phone_cant_empty
+        .validatePhoneCantEmpty
         .getString(context);
     }
     if (value.length < 10) {
       return AppLocale
-        .validate_phone_min_char
+        .validatePhoneMinChar
         .getString(context);
     }
     return null;
@@ -66,18 +66,18 @@ class FormValidator {
     int? min, 
     int? max
   }) {
-    var requiredChar = AppLocale.validate_required_char.getString(context);
+    var requiredChar = AppLocale.validateRequiredChar.getString(context);
     if (value == null || value.isEmpty) {
       return label + AppLocale
-        .validate_required_cant_empty
+        .validateRequiredCantEmpty
         .getString(context);
     }
     if (min != null && value.length < min) {
-      var requiredMin = AppLocale.validate_required_min.getString(context);
+      var requiredMin = AppLocale.validateRequiredMin.getString(context);
       return '$label $requiredMin $min $requiredChar';
     }
     if (max != null && value.length > max) {
-      var requiredMax = AppLocale.validate_required_max.getString(context);
+      var requiredMax = AppLocale.validateRequiredMax.getString(context);
       return '$label $requiredMax $min $requiredChar';
     }
     return null;

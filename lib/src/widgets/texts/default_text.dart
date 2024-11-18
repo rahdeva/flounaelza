@@ -101,7 +101,7 @@ class DefaultText extends StatelessWidget {
       textAlign: textAlign,
       maxLines: maxLines,
       overflow: overflow,
-      style: GoogleFonts.georama(
+      style: GoogleFonts.lora(
         textStyle: TextStyle(
           decoration: decoration,
           decorationColor: decorationColor,
