@@ -25,8 +25,8 @@ class _LoginPageState extends State<LoginPage> {
   bool isLoading = false;
   bool isFilled = false;
 
-  _submitIdentity() async {
-    NavigationUtil.go(AppRoutes.HOME);
+  _submitLogin() async {
+    NavigationUtil.go(AppRoutes.PRODUCT);
   }
 
   _checkFilled(){
@@ -114,7 +114,7 @@ class _LoginPageState extends State<LoginPage> {
                 label: AppLocale.signIn.getString(context),
                 onPressed: (){
                   if (_loginFormKey.currentState!.validate()) {
-                    _submitIdentity();
+                    _submitLogin();
                   }
                 },
                 isLoading: isLoading,

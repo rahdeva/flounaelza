@@ -27,19 +27,19 @@ class BottomNavBarWidget extends StatelessWidget {
   List<Map<String, dynamic>> bottomNavRoutes(BuildContext context) => [
     {
       'index': 0,
-      'routeName': AppRoutes.HOME,
+      'routeName': AppRoutes.PRODUCT,
       'icon': SvgAssetConstant.homeIcon,
       'label': AppLocale.product.getString(context),
     },
     {
       'index': 1,
-      'routeName': AppRoutes.MY_COUPON,
+      'routeName': AppRoutes.TRANSACTION,
       'icon': SvgAssetConstant.ticketIcon,
       'label': AppLocale.transaction.getString(context),
     },
     {
       'index': 2,
-      'routeName': AppRoutes.SCAN,
+      'routeName': AppRoutes.ACTION,
       'icon': SvgAssetConstant.filterDateIcon,
       'label': AppLocale.action.getString(context),
     },

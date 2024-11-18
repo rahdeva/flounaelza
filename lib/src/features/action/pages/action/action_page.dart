@@ -1,20 +1,22 @@
 import 'package:flutter/material.dart';
 import 'package:flutter/services.dart';
+import 'package:flutter_svg/flutter_svg.dart';
 import 'package:flounaelza/src/constants/app_colors_constant.dart';
+import 'package:flounaelza/src/constants/asset_constant.dart';
 import 'package:flounaelza/src/constants/locale_constant.dart';
-import 'package:flounaelza/src/features/history/pages/widgets/cuopon_history_list_builder.dart';
+import 'package:flounaelza/src/widgets/buttons/pressable.dart';
 import 'package:flounaelza/src/widgets/menus/bottom_nav_bar/bottom_nav_bar_widget.dart';
 import 'package:flounaelza/src/widgets/texts/default_text.dart';
 import 'package:flutter_localization/flutter_localization.dart';
 
-class HistoryPage extends StatefulWidget {
-  const HistoryPage({super.key});
+class ActionPage extends StatefulWidget {
+  const ActionPage({super.key});
 
   @override
-  State<HistoryPage> createState() => _HistoryPageState();
+  State<ActionPage> createState() => _ActionPageState();
 }
 
-class _HistoryPageState extends State<HistoryPage> {
+class _ActionPageState extends State<ActionPage> {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
@@ -22,11 +24,26 @@ class _HistoryPageState extends State<HistoryPage> {
         toolbarHeight: 80,
         backgroundColor: AppColors.backgroundColor,
         title: DefaultText(
-          text: AppLocale.history.getString(context),
+          text: AppLocale.product.getString(context),
           type: DefaultTextType.text3XL,
           color: AppColors.black900,
           weight: DefaultTextWeight.bold,
         ),
+        actions: [
+          Pressable(
+            onPressed: (){},
+            child: Padding(
+              padding: const EdgeInsets.only(right: 16),
+              child: SvgPicture.asset(
+                SvgAssetConstant.notifIcon,
+                colorFilter: const ColorFilter.mode(
+                  AppColors.black700,
+                  BlendMode.srcIn
+                ),
+              ),
+            ),
+          )
+        ],
         systemOverlayStyle: const SystemUiOverlayStyle(
           statusBarColor: Colors.white,
           statusBarIconBrightness: Brightness.dark,
@@ -34,12 +51,11 @@ class _HistoryPageState extends State<HistoryPage> {
         ),
       ),
       extendBodyBehindAppBar: false,
-      bottomNavigationBar: const BottomNavBarWidget(currentIndex: 3),
-      body: const SingleChildScrollView(
+      bottomNavigationBar: const BottomNavBarWidget(currentIndex: 2),
+      body: SingleChildScrollView(
         child: Column(
           children: [
-            ListCuoponHistoryBuilder(),
-            SizedBox(height: 8),
+            const SizedBox(height: 8),
           ],
         ),
       ),
